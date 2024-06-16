@@ -12,4 +12,11 @@ router.route("/")
          res.json(partialData)
       })
 
+router.route('/:id')
+      .get((req,res)=>{
+        let data=JSON.parse(fs.readFileSync("./data/videos.json"));
+        const oneObj=data.find(obj=>obj.id===req.params.id);
+        res.json(oneObj)
+      })
+
 export default router;

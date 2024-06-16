@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import router from "./routes/videos.js";
 const app=express();
+app.use(express.static('./public'));
 app.use(cors());
 const api_key = process.env.api_key||"3e1b084f-72fa-4a65-8938-76c9f8b3a923";
 app.use((req,res,next)=>{
