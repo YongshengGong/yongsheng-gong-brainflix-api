@@ -13,7 +13,6 @@ app.use((req, res, next) => {
         return;
     }
     else {
-        // res.status(200).json({message:"api key is valid"});
         next();
     }
 })
